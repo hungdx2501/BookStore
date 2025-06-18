@@ -16,13 +16,19 @@ public abstract class BookMapper {
     @Autowired
     private AuthorRepository authorRepository;
 
-    @Mapping(target = "id", expression = "java(bookDto.getId())")
-    @Mapping(target = "name", expression = "java(bookDto.getName())")
     @Mapping(target = "author", expression = "java(getAuthor(bookDto))")
     public abstract BookEntity map(BookDto bookDto);
-    @Mapping(target = "id", expression = "java(bookEntity.getId())")
-    @Mapping(target = "name", expression = "java(bookEntity.getName())")
+
+    @Mapping(target = "id", source = "bookEntity.id")
+    @Mapping(target = "authorId", expression = "java(getAuthorId(bookEntity))")
     public abstract BookDto mapToDto(BookEntity bookEntity);
+
+    Long getAuthorId(BookEntity entity) {
+        if (entity.getAuthor() == null) {
+            return -1L;
+        }
+        return entity.getAuthor().getId();
+    }
 
     AuthorEntity getAuthor(BookDto bookDto) {
         if (bookDto.getAuthorId() == null) {

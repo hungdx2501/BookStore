@@ -2,12 +2,11 @@ package com.hungdx.bookstore.dto;
 
 import lombok.*;
 
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class BookDto {
     private Long id;
     private String name;
-    private Long authorId;
+    public Long authorId;
 }

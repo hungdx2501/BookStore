@@ -2,7 +2,6 @@ package com.hungdx.bookstore.model;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.web.bind.annotation.Mapping;
 
 @Getter
 @Setter
@@ -12,9 +11,10 @@ import org.springframework.web.bind.annotation.Mapping;
 @Entity
 public class BookEntity {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="author_id", referencedColumnName = "id")
     private AuthorEntity author;
 }
