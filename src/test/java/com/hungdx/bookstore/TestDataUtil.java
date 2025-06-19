@@ -1,5 +1,6 @@
 package com.hungdx.bookstore;
 
+import com.hungdx.bookstore.dto.AuthorDto;
 import com.hungdx.bookstore.dto.BookDto;
 import com.hungdx.bookstore.model.AuthorEntity;
 import com.hungdx.bookstore.model.BookEntity;
@@ -56,6 +57,14 @@ public final class TestDataUtil {
                 .id(1L)
                 .name("War and Peace IV")
                 .authorId(2L)
+                .build();
+    }
+
+    public static AuthorDto createAuthorDto() {
+        return AuthorDto.builder()
+                .id(1L)
+                .name("James Gun I")
+                .age(70)
                 .build();
     }
 }

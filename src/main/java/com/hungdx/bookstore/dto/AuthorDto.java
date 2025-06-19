@@ -1,14 +1,13 @@
 package com.hungdx.bookstore.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
+@EqualsAndHashCode
 public class AuthorDto {
     private Long id;
     private String name;
