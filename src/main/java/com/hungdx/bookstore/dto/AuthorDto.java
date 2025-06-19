@@ -12,4 +12,5 @@ import lombok.Setter;
 public class AuthorDto {
     private Long id;
     private String name;
+    private Integer age;
 }

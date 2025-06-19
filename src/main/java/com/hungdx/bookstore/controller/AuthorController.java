@@ -3,6 +3,7 @@ package com.hungdx.bookstore.controller;
 import com.hungdx.bookstore.dto.AuthorDto;
 import com.hungdx.bookstore.service.AuthorService;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/authors")
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class AuthorController {
     private final AuthorService authorService;
 

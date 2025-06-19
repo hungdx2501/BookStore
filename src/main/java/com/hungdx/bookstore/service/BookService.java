@@ -6,12 +6,13 @@ import com.hungdx.bookstore.model.BookEntity;
 import com.hungdx.bookstore.repository.BookRepository;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class BookService {
     private final BookRepository bookRepository;
     private final BookMapper bookMapper;

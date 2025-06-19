@@ -12,9 +12,11 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 @Entity
+@EqualsAndHashCode
 public class AuthorEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    private Integer age;
 }

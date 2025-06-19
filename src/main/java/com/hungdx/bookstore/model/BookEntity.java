@@ -9,6 +9,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@EqualsAndHashCode
 public class BookEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

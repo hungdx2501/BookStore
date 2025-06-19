@@ -4,6 +4,7 @@ import com.hungdx.bookstore.dto.BookDto;
 import com.hungdx.bookstore.model.BookEntity;
 import com.hungdx.bookstore.service.BookService;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/books")
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class BookController {
     private final BookService bookService;
 
