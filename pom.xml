@@ -60,6 +60,11 @@
 			<artifactId>mapstruct</artifactId>
 			<version>1.5.3.Final</version>
 		</dependency>
+		<dependency>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
+			<scope>runtime</scope>
+		</dependency>
 
 		<!-- MapStruct annotation processor -->
 		<dependency>
